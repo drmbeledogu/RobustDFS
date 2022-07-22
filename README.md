@@ -1,6 +1,11 @@
 # RobustDFS
 Robust Optimization framework for Daily Fantasy Football
 
+### Description
+The goal of daily fantasy sports is to draft a proper lineup $(x∈{0,1}^N)$ for which each player has a cost $(c∈R_+^N)$, subject to a budget constraint, that maximizes the number of points you will receive. Given that you have projections for what each player will score (p∈R^N), this problem can be formulated as a simple mixed integer linear programming problem (MILP):
+$$p^Tx$$
+$$s.t.       c^Tx \leq Budget$$
+
 ### Dependencies
 * [NumPy](https://numpy.org/install/)
 * [SciPy](https://scipy.org/install/)
