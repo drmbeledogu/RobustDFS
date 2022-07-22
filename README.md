@@ -29,6 +29,11 @@ The file, udfs_data2021.csv, is a combination of historical Draftkings point pro
 * **opt_functions.py:** This file contains all the helper functions required to generate relevant information to solve the mixed integer linear programming and robust optimization problems.It also contains the functions that directly solves these two problems.
 
 ### Notebooks
-* **production_scrape.ipynb:**
-* **EDA.ipynb:**
-* **optimize_lineup.ipynb:**
+* **production_scrape.ipynb:** This notebook is not required. It is what I used to scrape the historical production data from rotoguru1.com. I thought it may be useful to include for others to run this analysis on seasons other than 2021-2022 if they have projection data for those other seasons.
+* **EDA.ipynb:** This notebook is used for exploratory data analysis, hence the norebook title. Each cell has different purposes listed below. The notebook itself will have more commentary/fundamental reasoning for why a particular attribute of the data is being explored/investigated.
+  * **Cell 2:** View raw dataframe
+  * **Cell 3:** Investigate distribution of errors for each position.
+  * **Cells 4&5:** Investigate correlation of errors between positional pairs on the same team
+  * **Cells 6&7:** Investigate correlation of errors between positional pairs on competing teams
+  * **Cell 8:** Visualize the shape and size of uncertainty sets over simulated errors
+* **optimize_lineup.ipynb:** This is the notebook used to actually create MILP and robust lineups and to investigate the results of these lineups. More details about the methdology/fundamental mathematics for each cell will soon be available in the notebook itself.
