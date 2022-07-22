@@ -2,9 +2,21 @@
 Robust Optimization framework for Daily Fantasy Football
 
 ### Description
-The goal of daily fantasy sports is to draft a proper lineup $(x∈{0,1}^N)$ for which each player has a cost $(c∈R_+^N)$, subject to a budget constraint, that maximizes the number of points you will receive. Given that you have projections for what each player will score (p∈R^N), this problem can be formulated as a simple mixed integer linear programming problem (MILP):
-$$p^Tx$$
-$$s.t. \; c^Tx \leq Budget$$
+The goal of daily fantasy sports is to draft a proper lineup $(x∈{0,1}^N)$ for which each player has a cost $(c∈R_+^N)$, subject to a budget constraint, that maximizes the number of points you will receive. Given that you have projections for what each player will score $(p∈R^N)$, this problem can be formulated as a simple mixed integer linear programming problem (MILP):
+
+$$\max_{x}p^Tx$$
+$$\text{$s.t.$       $c^Tx \leq Budget$}$$
+
+At first glance, this seems fair however the payout structure of the competition is being neglected. Player projections have some variance and rarely turn out to be true. Given the variance of performance and the competition payout structure, is maximizing projected points the correct strategy?
+
+In this work, focus was placed on 50/50 and Double-Up competitions where the top percentage, 50% and 45% respectively, all receive the same payout, and the bottom percentage receive no payout. In these competitions, if there are two lineups, one formed under the MILP formulation that has a wider variance in performance than one formed under a “Robust” formulation. MILP might have a higher average score but there is significant probability density for which no payout is received, while the Robust lineup never performs below the payout line. Additionally, MILP is not rewarded extra for the possibility of higher performance.
+
+There is a paradigm that aims to “maximizes the worst-case scenario” called Robust Optimization. In 50/50 and Double-Up, it may be advantageous to maximize the worst possible performance of your lineup given some uncertainty set (U) around player performance. The robust formulation is:
+
+$$\max_{x}p^Tx - \|x\|\$$
+$$\text{$s.t.$       $c^Tx \leq Budget$}$$
+
+This repository aims to investigate these ideas and generate lineups using both optimization frameworks. Details around the construction of uncertainty sets as well as the derivation of the Robust formulation will be included in a paper that will soon be added to the respository.
 
 ### Dependencies
 * [NumPy](https://numpy.org/install/)
