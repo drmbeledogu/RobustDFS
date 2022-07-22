@@ -9,6 +9,8 @@ At first glance, this seems fair however the payout structure of the competition
 
 In this work, focus was placed on 50/50 and Double-Up competitions where the top percentage, 50% and 45% respectively, all receive the same payout, and the bottom percentage receive no payout. Now imagine lineup 1 has a higher mean but wider variance in performance than lineup 2. Although lineup 2 performs worse on average, if the low side of the probability distribution is still above the payout line, you would select lineup 2 anyways because the expected value of the payout is still higher than lineup 1. In a sense we are looking for the lineup that maximizes the low side of the probability distribution or “maximizes the worst-case scenario".
 
+![alt text](https://github.com/drmbeledogu/RobustDFS/raw/main/Documents/example_lineup_comparison.jpg)
+
 There is an optimization paradigm that aims to “maximize the worst-case scenario” called Robust Optimization. In 50/50 and Double-Up, it may be advantageous to maximize the worst possible performance of your lineup given some uncertainty set (U) around player performance. The robust formulation is:
 
 $$\max_{x}p^Tx - \rho\\|(\Sigma^\frac{1}{2}\)^T x\\|\$$
