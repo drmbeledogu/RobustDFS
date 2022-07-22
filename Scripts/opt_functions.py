@@ -586,7 +586,7 @@ def MILP(projections, costs, pos_dict, exclude):
     model.addConstr(sum([x[i] for i in pos_dict["RB"]]) >= 2)      #RB constraint
     model.addConstr(sum([x[i] for i in pos_dict["TE"]]) >= 1)      #TE constraint
     model.addConstr(sum([x[i] for i in pos_dict["DST"]]) == 1)     #DST constraint
-    model.addConstr(sum(x) == 9)                                   #QB constraint
+    model.addConstr(sum(x) == 9)                                   #Lineup size constraint
 
     #Exclusion constraints
     for index in exclude:
@@ -655,7 +655,7 @@ def Robust(projections, costs, pos_dict, exclude, cov_matrix, rho, shape):
     model.addConstr(sum([x[i] for i in pos_dict["RB"]]) >= 2)      #RB constraint
     model.addConstr(sum([x[i] for i in pos_dict["TE"]]) >= 1)      #TE constraint
     model.addConstr(sum([x[i] for i in pos_dict["DST"]]) == 1)     #DST constraint
-    model.addConstr(sum(x) == 9)                                   #QB constraint
+    model.addConstr(sum(x) == 9)                                   #Lineup size constraint
 
     #Exclusion constraints
     for index in exclude:
