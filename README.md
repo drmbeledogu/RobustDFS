@@ -25,5 +25,10 @@ The file, udfs_data2021.csv, is a combination of historical Draftkings point pro
 * **error (float):** Difference between Draftkings projected points and actual points | ProjDKPts - DK points
 
 ### Supporting Python Files
+* **nearest_correlation.py:** This file contains the functions required to solve the nearrest correlation matrix problem. This implementation uses an alternating projections algorithm developed by Nick Hingam. Details about the fundamentals of Nick's alternating projections method can be found [here](https://www.maths.manchester.ac.uk/~higham/narep/narep369.pdf). The python implementation was developed by Mike Croucher and the original repo with details are [here](https://github.com/mikecroucher/nearest_correlation). More details on the reason for why this file is needed will come with the research paper.
+* **opt_functions.py:** This file contains all the helper functions required to generate relevant information to solve the mixed integer linear programming and robust optimization problems.It also contains the functions that directly solves these two problems.
 
 ### Notebooks
+* **production_scrape.ipynb:**
+* **EDA.ipynb:**
+* **optimize_lineup.ipynb:**
