@@ -11,10 +11,12 @@ In this work, focus was placed on 50/50 and Double-Up competitions where the top
 
 ![alt text](https://github.com/drmbeledogu/RobustDFS/raw/main/Documents/example_lineup_comparison.jpg)
 
-There is an optimization paradigm that aims to “maximize the worst-case scenario” called Robust Optimization. In 50/50 and Double-Up, it may be advantageous to maximize the worst possible performance of your lineup given some uncertainty set $(\mathcal{U})$ around player performance. The robust formulation is:
+There is an optimization paradigm that aims to “maximize the worst-case scenario” called Robust Optimization. In 50/50 and Double-Up, it may be advantageous to maximize the worst possible performance of your lineup given some uncertainty set around player performance. The robust formulation is:
 
-$$\max_{x} \\; p^Tx - \rho\\|(\Sigma^\frac{1}{2}\)^T x\\|\$$
+$$\max_{x} \\; p^Tx-\rho\\|\Sigma^\frac{1}{2}x\\|$$
+
 $$s.t. \quad c^Tx \leq Budget$$
+
 This repository aims to investigate these ideas and generate lineups using both optimization frameworks. Details around the construction of uncertainty sets as well as the derivation of the Robust formulation will be included in a paper that will soon be added to the respository.
 
 ### Dependencies
