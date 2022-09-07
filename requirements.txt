@@ -1,0 +1,6 @@
+numpy
+scipy
+pandas
+matplotlib
+distfit
+gurobipy
