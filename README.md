@@ -20,6 +20,7 @@ $$s.t. \quad c^Tx \leq Budget$$
 This repository aims to investigate these ideas and generate lineups using both optimization frameworks. Details around the construction of uncertainty sets as well as the derivation of the Robust formulation will be included in a paper that will soon be added to the respository.
 
 ### Dependencies
+The dependencies required for this project are listed below. You can run `pip install -r requirements.txt` from the command line or install the dependencies to your liking using the details provided at the links below.
 * [NumPy](https://numpy.org/install/)
 * [SciPy](https://scipy.org/install/)
 * [Pandas](https://pandas.pydata.org/docs/getting_started/install.html)
