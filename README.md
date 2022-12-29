@@ -36,7 +36,7 @@ The file, `udfs_data2021.csv`, is a combination of historical Draftkings point p
 * `Pos (string)`: Player position
 * `Team (string)`: Team for which the player played for
 * `ProjDKPts (float)`: Projected Draftkings points
-* `ProjFDPts (float)`: Projected FanDueal points
+* `ProjFDPts (float)`: Projected FanDuel points
 * `Team2 (string)`: Alternate team respresentation for "Team" field
 * `Oppt (string)`: Opponent's team name
 * `DK points (float)`: Actual Draftkings points
